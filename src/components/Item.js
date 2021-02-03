@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   tag: {
+    maxHeight: "30px",
     "& >div": {
       padding: "5px 10px",
       borderRadius: "4px",

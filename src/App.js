@@ -67,27 +67,6 @@ export default function App() {
   const [addOn, setAddOn] = useState(false);
   const [note, setAllNotes] = useState(
     localStorage.getItem("note") ? JSON.parse(localStorage.getItem("note")) : []
-    // {
-    //   id: 1,
-    //   createAt: 1612334931141,
-    //   content: "Roboto Font",
-    //   level: "low",
-    //   status: "doing",
-    // },
-    // {
-    //   id: 2,
-    //   createAt: 1612334931141,
-    //   content: "Font Icons",
-    //   level: "medium",
-    //   status: "done",
-    // },
-    // {
-    //   id: 3,
-    //   createAt: 1612334931141,
-    //   content: "SVG Icons",
-    //   level: "high",
-    //   status: "doing",
-    // },
   );
   const [data, setData] = useState({
     id: 0,
