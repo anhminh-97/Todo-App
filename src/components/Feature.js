@@ -135,7 +135,6 @@ export default function Feature({
           label="Sort by date"
           type="date"
           onChange={handleSortDate}
-          defaultValue="yyyy-MM-dd"
           InputLabelProps={{
             shrink: true,
           }}
