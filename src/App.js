@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CssBaseline, Container, makeStyles } from "@material-ui/core";
 import ButtonAppBar from "./components/AppBar";
 import Feature from "./components/Feature";
 import FormItem from "./components/FormItem";
 import Item from "./components/Item";
 import moment from "moment";
+import productApi from "./api/productApi";
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -63,6 +64,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function App() {
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const productList = await productApi.getAll();
+      console.log("productList :>> ", productList);
+    };
+    fetchProduct();
+  });
   const classes = useStyles();
   const [addOn, setAddOn] = useState(false);
   const [note, setAllNotes] = useState(
